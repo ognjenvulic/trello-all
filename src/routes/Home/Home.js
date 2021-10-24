@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Playground from '../../components/Playground/Playground';
 
 const Home = () => {
   return (
@@ -7,6 +8,7 @@ const Home = () => {
       <div>HOME</div>
       <div>
         <Link to="/boards">Boards</Link>
+        <Playground/>
       </div>
     </React.Fragment>
   )
