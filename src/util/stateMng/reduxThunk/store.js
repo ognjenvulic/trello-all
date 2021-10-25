@@ -11,9 +11,8 @@ export default function ReduxThunkStore(props) {
 
   // This is for Redux developer tools in browser
   if (process.env.NODE_ENV === 'development') {
-    const devToolsExtension = window.devToolsExtension;
-    if (typeof devToolsExtension === 'function') {
-      enhancers.push(devToolsExtension());
+    if (window.__REDUX_DEVTOOLS_EXTENSION__) {
+      enhancers.push(window.__REDUX_DEVTOOLS_EXTENSION__());
     }
   }
 

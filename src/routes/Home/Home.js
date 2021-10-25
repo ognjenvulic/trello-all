@@ -1,6 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import Playground from '../../components/Playground/Playground';
+// import { Link } from 'react-router-dom';
+// import Playground from '../../components/Playground/Playground';
 
 const Home = ({
   authUser
