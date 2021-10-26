@@ -1,6 +1,8 @@
 import { combineReducers } from 'redux';
 import commonReducers from './common';
+import boardReducers from './boards/boardReducers';
 
 export default combineReducers({
-  common: commonReducers
+  common: commonReducers,
+  boards: boardReducers,
 });

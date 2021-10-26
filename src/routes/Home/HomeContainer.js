@@ -2,12 +2,12 @@ import React, {useEffect} from 'react';
 import { connect } from 'react-redux';
 import Home from './Home';
 import { fetchAuthUser } from '../../util/stateMng/reduxThunk/actions';
-import { authUserSelector } from '../../util/stateMng/reduxThunk/selectors';
+import { authUserSelector, boardsSelector } from '../../util/stateMng/reduxThunk/selectors';
 
 //Container should do the data manipulation (fetching, global state connect) to make presentational component cleaner.
 //With Hooks some argue not to do Container Pattern but to use custom hooks.
 //This is just for demonstration. I think that in smaller apps it's an overkill :) 
-const HomeContainer = ({ authUser, fetchAuthUser }) => {
+const HomeContainer = ({ authUser, boards, fetchAuthUser }) => {
 
   useEffect(() => {
     fetchAuthUser();
@@ -16,12 +16,9 @@ const HomeContainer = ({ authUser, fetchAuthUser }) => {
   return (
     <Home
       authUser = {authUser}
+      boards = {boards}
     />
   )
-}
-
-HomeContainer.defaultProps = {
-  authUser: {},
 }
 
 const mapActionCreators = {
@@ -30,7 +27,8 @@ const mapActionCreators = {
 
 const mapStateToProps = (state) => {
   return {
-    authUser: authUserSelector(state)
+    authUser: authUserSelector(state),
+    boards: boardsSelector(state)
   };
 };
 

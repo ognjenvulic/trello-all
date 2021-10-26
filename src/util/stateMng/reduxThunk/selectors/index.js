@@ -1,6 +1,6 @@
 import { createSelector } from 'reselect';
 
-const commonSelector = (state) => (state.common ? state.common : {});
+const commonSelector = (state) => (state.common || {});
 
 export const authUserSelector = createSelector(
   commonSelector,
@@ -8,4 +8,6 @@ export const authUserSelector = createSelector(
     return common.authUser;
   }
 );
+
+export const boardsSelector = (state) => (state.boards || []);
 

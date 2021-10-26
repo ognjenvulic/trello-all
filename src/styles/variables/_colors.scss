@@ -1,0 +1,15 @@
+
+$primary: #00FF99;
+$secondary: #ffff66;
+$tertiary: #88bbff;
+$alert: #ff5566;
+$neutralBlack:#181818;
+$neutralWhite:#FFFFFF;
+
+:export {
+  primary: $primary;
+  secondary: $secondary;
+  tertiary: $tertiary;
+  neutralBlack: $neutralBlack;
+  neutralWhite: $neutralWhite;
+}

@@ -1,0 +1,30 @@
+.AppBarWrapper {
+  background-color: #026AA7;
+  backdrop-filter: blur(24px);
+  max-height: 44px;
+  padding: 6px 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .Logo {
+    width: 75px;
+    height: 15px;
+    padding: 8px 0;
+  }
+
+  .Avatar {
+    width: 32px;
+    height: 32px;
+    background-color: #DFE1E6;
+    border: 0;
+    border-radius: 100%;
+    color: #172B4D;
+    align-items: center;
+    text-align: center;
+    font-size: 14px;
+    line-height: 32px;
+    font-weight: bold;
+    justify-content: center;
+  }
+}
