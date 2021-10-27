@@ -2,26 +2,23 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 /** @jsxImportSource @emotion/react */
 import { css, withTheme } from '@emotion/react';
-// import cx from 'classnames';
-// import commonClasses from 'styles/common/common.scss';
-const root = css`
-    padding: 32px;
-    background-color: hotpink;
-    font-size: 24px;
-    border-radius: 4px;
-    height: 150px;
+
+const root = (props) => css`
+  height: 112px;
+  padding: 8px;
+  background-color: ${props.theme.colors.primary};
+  color:${props.theme.colors.neutralWhite};
+  border-radius: 3px;
+  font-size: 16px;
+  font-weight: 700;
 `;
 
 function BoardBadge(props) {
   const { board } = props;
   return (
-    <div css={css`
-    
-  `}>
-      <Link to={`/board/${board.id}`}>
-        {board.name && <div>{board.name}</div>}
-      </Link>
-    </div>
+    <Link to={`/board/${board.id}`}>
+      <div css={root(props)}>{board.name && <div>{board.name}</div>}</div>
+    </Link>
   );
 }
 

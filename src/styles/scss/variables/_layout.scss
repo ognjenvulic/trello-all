@@ -35,3 +35,5 @@ $lg-only: "#{$screen} and (min-width:#{lower-bound($lg-range)}) and (max-width:#
 
 $xl-up: "#{$screen} and (min-width:#{lower-bound($xl-range)})" !default;
 $xl-only: "#{$screen} and (min-width:#{lower-bound($xl-range)}) and (max-width:#{upper-bound($xl-range)})" !default;
+
+$trello-max-width: 1356px;

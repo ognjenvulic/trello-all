@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { authUserSelector } from '../../util/stateMng/reduxThunk/selectors';
+import { authUserSelector } from '../../utils/stateMng/reduxThunk/selectors';
 import { Link } from 'react-router-dom';
 // import cx from 'classnames';
 // import commonClasses from 'styles/common/common.scss';

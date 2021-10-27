@@ -1,20 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './styles/index.scss';
+import './styles/scss/index.scss';
 import App from './components/App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom';
-import StateManagementProvider from './util/stateMng';
-import { ThemeProvider } from '@emotion/react';
+import StateManagementProvider from './utils/stateMng';
+import { ThemeProvider as EmotionCssInJSThemeProvider } from '@emotion/react';
 import theme from './styles/cssInJs/emotion/theme';
 
 ReactDOM.render(
   <React.StrictMode>
     <StateManagementProvider>
       <BrowserRouter>
-        <ThemeProvider theme={theme}>
+        <EmotionCssInJSThemeProvider theme={theme}>
           <App />
-        </ThemeProvider>
+        </EmotionCssInJSThemeProvider>
       </BrowserRouter>
     </StateManagementProvider>
   </React.StrictMode>,

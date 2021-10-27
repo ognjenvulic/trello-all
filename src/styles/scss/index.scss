@@ -19,10 +19,8 @@ body {
 
 .Container {
   width: 100%;
+  max-width: $trello-max-width;
   margin: auto;
-  @media #{$lg-up} {
-    width: #{lower-bound($lg-range)};
-  }
 }
 //------------------------------------//
 
@@ -31,7 +29,7 @@ body {
   --complete-color: #27aa80;
   --text-color: #172b4d;
   --disabled-color: #fad6d6;
-  --background-color: #f5eaea;
+  --background-color: #ebecf0;
 }
 
 a {
@@ -144,9 +142,9 @@ select {
 }
 
 .col {
-  min-height: 300px;
-  max-width: 300px;
-  width: 300px;
+  min-height: 250px;
+  max-width: 250px;
+  width: 250px;
 }
 
 .highlight-region {
