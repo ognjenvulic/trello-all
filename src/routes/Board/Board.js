@@ -1,5 +1,4 @@
-import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import React, { useState } from 'react';
 import { DndProvider } from 'react-dnd';
 import { HTML5Backend } from 'react-dnd-html5-backend';
 
@@ -7,14 +6,20 @@ import Item from "./components/Item";
 import DropWrapper from "./components/DropWrapper";
 import Col from "./components/Col";
 import { data, statuses } from "./data";
+/** @jsxImportSource @emotion/react */
+import { css } from '@emotion/react';
 
-const Board = () => {
+const root = css`
+  margin: 40px 0 0 16px;
+  display: flex;
+  overflow: auto;
+  border-radius: 3px;
+  font-size: 16px;
+  font-weight: 700;
+`;
+
+const Board = ({board, theme}) => {
   const [items, setItems] = useState(data);
-  
-  let { slug } = useParams();
-  useEffect(() => {
-    console.log(slug);
-  }, [slug]);
 
   const onDrop = (item, monitor, status) => {
     const mapping = statuses.find((si) => si.status === status);
@@ -38,7 +43,8 @@ const Board = () => {
  
   return (
     <DndProvider backend={HTML5Backend}>
-      <div className={'row'}>
+      <div css={root}>
+      {/* {board && board.lists && board.lists.length && board.lists.map((list) => { */}
         {statuses.map((s) => {
           return (
             <div key={s.status} className={'col-wrapper'}>

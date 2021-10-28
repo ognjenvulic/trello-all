@@ -13,7 +13,7 @@ const root = (props) => css`
   font-weight: 700;
 `;
 
-function BoardBadge(props) {
+function List(props) {
   const { board } = props;
   return (
     <Link to={`/board/${board.shortLink}`}>
@@ -22,8 +22,8 @@ function BoardBadge(props) {
   );
 }
 
-BoardBadge.defaultProps = {
+List.defaultProps = {
   board: {},
 };
 
-export default withTheme(BoardBadge);
+export default withTheme(List);

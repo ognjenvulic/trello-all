@@ -34,6 +34,7 @@ const Home = ({ boards = [], theme }) => {
           <Col sm={12} md={9}>
             <Row start='xs'>
               {boards &&
+                boards.map &&
                 boards.map((board) => (
                   <Col key={board.id} xs={12} md={6} lg={3}>
                     <BoardBadge board={board} />

@@ -6,6 +6,7 @@ const theme = {
     alert: `#ff5566`,
     neutralBlack: `#181818`,
     neutralWhite: `#FFFFFF`,
+    neutralGray: `#FAFBFC`
   },
   constans: {
     maxWidth: `1356px`
